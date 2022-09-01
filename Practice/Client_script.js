@@ -1,5 +1,3 @@
-#### If assignment_group = network && category == hardware Then restrict the user from creating record.py
-
 function onSubmit() {
     //Type appropriate comment here, and begin script below
     var group = g_form.getValue('assignment_group');
