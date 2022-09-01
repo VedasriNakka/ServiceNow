@@ -13,5 +13,4 @@ function onSubmit() {
         g_form.addInfoMessage('else');
         return true;
     }
-
 }
