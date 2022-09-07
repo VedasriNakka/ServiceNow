@@ -1,7 +1,6 @@
-// Script Include
+// Script Include -- getting user details
 var userDetails = Class.create();
 userDetails.prototype = Object.extendsObject(AbstractAjaxProcessor, {
-	// getting user details
 	getUserDetails : function(){		
 		var sysid = this.getParameter('caller_sys_id');
 		
@@ -22,7 +21,6 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
       return;
    }
 	var cal = g_form.getValue('u_caller');
-	
 	var ga = new GlideAjax('global.userDetails');
 	ga.addParam('sysparm_name', "getUserDetails");
 	ga.addParam('caller_sys_id', cal);
