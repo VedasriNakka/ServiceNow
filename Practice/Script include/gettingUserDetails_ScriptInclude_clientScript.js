@@ -1,5 +1,4 @@
-- Script include
-```js
+// Script Include
 var userDetails = Class.create();
 userDetails.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 	// getting user details
@@ -16,9 +15,9 @@ userDetails.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 	},
     type: 'userDetails'
 });
-```
-- Client script
-```js
+
+
+//Client Script
 function onChange(control, oldValue, newValue, isLoading, isTemplate) {
    if (isLoading || newValue === '') {
       return;
@@ -42,4 +41,3 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 		g_form.setValue('short_description', total_result);
 	}
 }
-```
