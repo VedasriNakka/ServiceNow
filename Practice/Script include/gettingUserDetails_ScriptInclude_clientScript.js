@@ -2,8 +2,7 @@
 var userDetails = Class.create();
 userDetails.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 	// getting user details
-	getUserDetails : function(){
-		
+	getUserDetails : function(){		
 		var sysid = this.getParameter('caller_sys_id');
 		
 		var gr = new GlideRecord('sys_user');
@@ -27,13 +26,11 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 	var ga = new GlideAjax('global.userDetails');
 	ga.addParam('sysparm_name', "getUserDetails");
 	ga.addParam('caller_sys_id', cal);
-	
 	ga.getXML(pop);
 	
 	function pop(response) {
 		var total_result = (response.responseXML.documentElement.getAttribute("answer"));
 		alert(total_result);
-		
 		var result = total_result.split('-');
 		g_form.setValue('u_enter_no',result[0] );
 		g_form.setValue('u_manager', result[1]);
