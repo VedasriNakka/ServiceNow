@@ -7,7 +7,7 @@ userDetails.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 		var user_email = this.getParameter('caller_sys_id');
 		var gr = new GlideRecord('sys_user');
 		//gr.addQuery('sys_id', sysid);
-		gr.addQuery('email', user_email);
+		gr.addQuery('email', user_email); //user_email.toString()
 		gr.query();
 		if(gr.next()){
 			return gr.user_name + "-" + gr.manager + "-" + gr.department;
