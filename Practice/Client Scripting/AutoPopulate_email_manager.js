@@ -39,17 +39,20 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
         //g_form.setValue('work_end', '2022-09-05 08:37:45');
     }
 
-    var user = g_form.getReference('u_caller');
-    g_form.setValue('u_email_id', user.email);
-    g_form.setValue('u_manager', user.manager);
-    //g_form.setValue('u_new_manager', user.manager);
-    //     alert('Hi');
-    //     alert(user.vip);
-    //     if (user.vip == "true") {
-    //         g_form.setValue('priority', 1);
-    //         g_form.flash('priority', '#FFFACD', 0);
-    //         g_form.enableAttachments();
-    //     } else
-    //         g_form.disableAttachments();
+    var user = g_form.getReference('u_caller',pop);
+	
+	function pop(user){
+		g_form.setValue('u_email_id', user.email);
+		g_form.setValue('u_manager', user.manager);
+		//g_form.setValue('u_new_manager', user.manager);
+		//     alert('Hi');
+		//     alert(user.vip);
+		//     if (user.vip == "true") {
+		//         g_form.setValue('priority', 1);
+		//         g_form.flash('priority', '#FFFACD', 0);
+		//         g_form.enableAttachments();
+		//     } else
+		//         g_form.disableAttachments();
+	}
 
 }
