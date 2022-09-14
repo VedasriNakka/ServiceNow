@@ -54,7 +54,8 @@ function onLoad() {
     //     alert("caller - " + g_scratchpad.caller);
 
     alert(g_scratchpad.caller + ": " + g_scratchpad.test);
-    g_form.setValue('description', g_scratchpad.test);
+    //g_form.setValue('description', g_scratchpad.test);
+	g_form.setValue('u_group_watch_list', g_scratchpad.test);
 
     g_form.addInfoMessage("sys_id - " + g_scratchpad.sysid);
     g_form.getValue('sys_id');
