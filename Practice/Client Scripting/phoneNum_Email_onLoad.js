@@ -6,6 +6,7 @@ function onLoad() {
 	
 //     var field = g_form.getValue('u_email_id');
    var reg_ex_email = /^\w+([-.]\w)*@\w{4,8}\.\w{2,5}$/;
+   //^(?![\.])[a-zA-Z0-9!#$%*\/?|^{}`~&'\+\-=.]+(?<![.]+)@(?![\.-])[a-zA-Z0-9-\.]+(\.[a-zA-Z0-9_]+)$
 //     var is_valid = field.match(reg_ex_email);
 
     if (is_valid) {

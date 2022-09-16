@@ -9,6 +9,7 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
     var is_valid = field.match(reg_ex);
 
     //var reg_ex_email = /^([a-zA-Z0-9][-]?[.]?)@(\w{3,8})\.(\w{2,5})$/;
+	//^(?![\.])[a-zA-Z0-9!#$%*\/?|^{}`~&'\+\-=.]+(?<![.]+)@(?![\.-])[a-zA-Z0-9-\.]+(\.[a-zA-Z0-9_]+)$
     //var is_valid = newValue.match(reg_ex_email);
 
     if (is_valid) {
